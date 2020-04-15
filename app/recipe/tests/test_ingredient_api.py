@@ -88,8 +88,12 @@ class PrivateIngredientApiTests(TestCase):
 
     def test_retrieve_ingredients_assigned_to_recipes(self):
         '''Test filtering ingredients by those assigned to recipe'''
-        ingredient1 = Ingredient.objects.create(user=self.user, name='as1212aS')
-        ingredient2 = Ingredient.objects.create(user=self.user, name='aSas121213213')
+        ingredient1 = Ingredient.objects.create(
+            user=self.user, name='as1212aS'
+        )
+        ingredient2 = Ingredient.objects.create(
+            user=self.user, name='aSas121213213'
+        )
         recipe = Recipe.objects.create(
             title='Test',
             time_miniutes=2,
